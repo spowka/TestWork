@@ -1,0 +1,50 @@
+<div class="ce">
+  <div class="ce__container">
+    <div class="title-tab">
+      <div class="page-title">
+        <div class="back-button">
+          <mat-icon [routerLink]="['/']">keyboard_backspace</mat-icon><span>Add Event</span>
+        </div>
+      </div>
+      <div class="sub-title">Preview</div>
+    </div>
+
+    <div class="ce__add-event">
+      <div class="event-field">
+        <form [formGroup]="eventForm">
+
+          <div class="event-field__label">Event name</div>
+          <input type="text" formControlName="eventName">
+
+          <div class="event-field__label">Address</div>
+          <input type="text" formControlName="eventAddress">
+
+          <div class="event-field__label">Date
+            <span
+              *ngIf="eventForm.controls['eventDate'].errors?.dateValidator && eventForm.controls['eventDate'].touched">
+              Incorrect date format</span>
+          </div>
+          <input type="text" formControlName="eventDate">
+
+          <button type="button" [disabled]="!eventForm.valid" [routerLink]="['/create']"
+            routerLinkActive="router-link-active" (click)="addEvent()">Add</button>
+        </form>
+      </div>
+
+      <div class="preview-event">
+        <div class="box-wrapper">
+          <div class="event-img">
+            Picture
+          </div>
+          <div class="event-info">
+            <span>{{ eventForm.controls['eventName'].value }}</span>
+            <div class="event-hint">
+              <div class="place">{{ eventForm.controls['eventAddress'].value }}</div>
+              <div class="data">{{ eventForm.controls['eventDate'].value}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

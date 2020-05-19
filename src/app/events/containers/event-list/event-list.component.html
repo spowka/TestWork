@@ -1,0 +1,14 @@
+<div class="el">
+  <div class="el__title">
+    Home
+  </div>
+  <div class="el__events">
+    <div class="event-box">
+      <app-event-box [event]="event" *ngFor="let event of eventBoxes"></app-event-box>
+    </div>
+    <div class="add-event" [routerLink]="['/create']">
+        <mat-icon>add</mat-icon>
+        <span>Add more</span>
+    </div>
+  </div>
+</div>

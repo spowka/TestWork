@@ -1,0 +1,85 @@
+@import '../event-box/event-box.component.scss';
+
+.ce {
+  padding: 15px 100px 15px 15px;
+
+  &__container {
+    .title-tab {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .page-title {
+        font-family: Roboto;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 42px;
+        width: 400px;
+
+        .back-button {
+          display: flex;
+
+          mat-icon {
+            font-size: 40px;
+            margin-right: 15px;
+          }
+        }
+      }
+
+      .sub-title {
+        font-family: Roboto;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 28px;
+        width: 280px;
+      }
+    }
+  }
+
+  &__add-event {
+    display: flex;
+    justify-content: space-between;
+
+    .event-field {
+      margin-top: 40px;
+      font-family: Roboto;
+      font-size: 24px;
+      line-height: 28px;
+
+      &__label {
+
+        span {
+          font-family: Roboto;
+          font-size: 18px;
+          line-height: 21px;
+          margin-left: 15px;
+          color: #FF0000;
+        }
+      }
+
+      input {
+        width: 314px;
+        height: 29px;
+        margin-bottom: 8px;
+        border: none;
+        background: #C4C4C4;
+      }
+
+      button {
+        display: block;
+        width: 183px;
+        height: 41px;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 42px;
+        border: none;
+        background: #C4C4C4;
+      }
+    }
+
+    .preview-event {
+      width: 280px;
+      height: 500px;
+    }
+  }
+}
